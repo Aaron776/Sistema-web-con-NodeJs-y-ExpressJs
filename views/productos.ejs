@@ -1,0 +1,22 @@
+<%- include layaouts/header.ejs %>
+<div class="container" style="display: flex ; flex-direction:column;">
+    <h1 style="text-align:center ;"><%=title %></h1>
+    <div class="imagenes">
+      <% for(let i=0;i<libros.length;i++) { %>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%=libros[i].titulo %></h5>
+                <img src="<%=libros[i].img %>" class="rounded mx-auto d-block">
+                <p class="card-text"><%=libros[i].descripcion %></p>
+                <p class="card-text">Precio: $<%=libros[i].precio %></p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+   </div>
+</div>
+<%- include layaouts/footer.ejs %>
